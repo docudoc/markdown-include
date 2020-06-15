@@ -40,11 +40,12 @@ class MarkdownInclude(Extension):
                 'relative paths for the include statement.'],
             'encoding': ['utf-8', 'Encoding of the files used by the include ' \
                 'statement.'],
+            'headingOffset': [0, 'Increases heading depth by a specific ' \
+                'amount (and the inheritHeadingDepth option).  Defaults to 0.'],
             'inheritHeadingDepth': [False, 'Increases headings on included ' \
                 'file by amount of previous heading (combines with '\
                 'headingOffset option).'],
-            'headingOffset': [0, 'Increases heading depth by a specific ' \
-                'amount (and the inheritHeadingDepth option).  Defaults to 0.'],
+            'relativeIncludes': [False, 'When true, includes can use relative paths.(Default: false)'],
             'throwException': [False, 'When true, if the extension is unable '\
                                 'to find an included file it will throw an '\
                                 'exception which the user can catch. If false '\
