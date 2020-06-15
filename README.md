@@ -9,7 +9,7 @@ LaTeX (and also the C pre-processor and Fortran). I originally wrote it for my
 ## Installation
 This module can now be installed using ``pip``.
 
-    pip install markdown-include
+    pip install git+https://github.com/docudoc/markdown-include.git#egg=markdown-include
 
 
 ## Usage
