@@ -42,6 +42,8 @@ LINK_SYNTAX = re.compile(r'\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
 IMG_SYNTAX = re.compile(r'!\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
 
 
+
+
 class MarkdownInclude(Extension):
     def __init__(self, configs={}):
         self.config = {
@@ -97,6 +99,22 @@ class IncludePreprocessor(Preprocessor):
         path = Path(file)
         return path.parent
 
+    '''Remove yaml from the inclusion'''
+    def excise_yaml(self, text, start, end):
+        outtext=''
+        YAML_START = ['---']
+        YAML_STOP = ['---', '...']
+        for line in text.splitlines():
+            if line.strip() in YAML_START:
+                break
+            outtext += line
+        for line in text.splitlines():
+            if line.strip() in YAML_STOP:
+                break
+        for line in text:
+            outtext += line
+        return outtext
+
     def run(self, lines):
         done = False
         bonusHeading = ''
@@ -114,6 +132,7 @@ class IncludePreprocessor(Preprocessor):
                     try:
                         with open(filename, 'r', encoding=self.encoding) as r:
                             text = r.readlines()
+                            text = self.excise_yaml(text)
                             
                     except Exception as e:
                         if not self.throwException:
