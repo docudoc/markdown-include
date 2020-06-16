@@ -4,6 +4,7 @@ This is an extension to [Python-Markdown](https://pythonhosted.org/Markdown/) wh
 
 
 ## Installation
+
 This module can now be installed using ``pip``.
 
     pip install git+https://github.com/docudoc/markdown-include.git#egg=markdown-include
@@ -32,10 +33,10 @@ The following settings can be specified when initialising the plugin.
 - __inheritHeadingDepth__ : If true, increases headings on include file by amount of previous heading. Combiens with headingOffset   option, below. (Default: False.)
 - __headingOffset__: Increases heading depth by a specific ammount, in addition to the inheritHeadingDepth Option. (Default: 0)
 - __throwException__: When true, if the extension is unable to find an included file it will throw an exception which the user can catch. If false (default), a warning will be printed and Markdown will continue parsing the file.
-- __relativeIncludes__: When true, includes can use relative paths. (Default: false)
+- __relativeIncludes__: When true, includes can use relative paths. (Default: false) [TBD]
 
 
-##Examples
+## Examples
 
 An example of setting the base path and file encoding is given below:
 ```python
@@ -97,7 +98,7 @@ produces
 
 ## ChangeLog
 ### Version 0.6
-YAML Frontmatter is no longer included from the included files.
+YAML Frontmatter is no longer included from the included files. Only the first YAML section is ignored. 
 ### Version 0.5.1
 Bugfix for a syntax error.
 ### Version 0.5
