@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b55ee30-af43-4936-9f15-efa52a930601" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="relative-includes" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dNETEYVzMtE8JGASf1x7DurY6Z" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="markdown-include" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b55ee30-af43-4936-9f15-efa52a930601" name="Default Changelist" comment="" />
+      <created>1592257155182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592257155182</updated>
+      <workItem from="1592257159009" duration="20123000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add dummy option.">
+      <created>1592258251859</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592258251859</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Some helper functions">
+      <created>1592305711178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592305711178</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Regex expressions for links and images">
+      <created>1592306594212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592306594212</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Excise YAML">
+      <created>1592323213253</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592323213253</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Version bump">
+      <created>1592323539008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592323539008</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Version bump">
+      <created>1592327801908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592327801908</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Yaml removal, alternate method">
+      <created>1592336115715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592336115715</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Docs">
+      <created>1592338966177</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592338966177</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Add dummy option." />
+    <MESSAGE value="Some helper functions" />
+    <MESSAGE value="Regex expressions for links and images" />
+    <MESSAGE value="Excise YAML" />
+    <MESSAGE value="Version bump" />
+    <MESSAGE value="Yaml removal, alternate method" />
+    <MESSAGE value="Docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docs" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="505" y="220" width="732" height="644" key="#Inspections" timestamp="1592258026814">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="505" y="220" width="732" height="644" key="#Inspections/72.27.1608.1023@72.27.1608.1023" timestamp="1592258026814" />
+    <state x="415" y="86" width="912" height="918" key="CommitChangelistDialog2" timestamp="1592338965986">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="415" y="86" width="912" height="918" key="CommitChangelistDialog2/72.27.1608.1023@72.27.1608.1023" timestamp="1592338965986" />
+    <state x="223" y="117" width="1286" height="855" key="DiffContextDialog" timestamp="1592257493929">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="223" y="117" width="1286" height="855" key="DiffContextDialog/72.27.1608.1023@72.27.1608.1023" timestamp="1592257493929" />
+    <state width="1562" height="266" key="GridCell.Tab.0.bottom" timestamp="1592340038046">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="266" key="GridCell.Tab.0.bottom/72.27.1608.1023@72.27.1608.1023" timestamp="1592340038046" />
+    <state width="1562" height="266" key="GridCell.Tab.0.center" timestamp="1592340038046">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="266" key="GridCell.Tab.0.center/72.27.1608.1023@72.27.1608.1023" timestamp="1592340038046" />
+    <state width="1562" height="266" key="GridCell.Tab.0.left" timestamp="1592340038045">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="266" key="GridCell.Tab.0.left/72.27.1608.1023@72.27.1608.1023" timestamp="1592340038045" />
+    <state width="1562" height="266" key="GridCell.Tab.0.right" timestamp="1592340038046">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="266" key="GridCell.Tab.0.right/72.27.1608.1023@72.27.1608.1023" timestamp="1592340038046" />
+    <state width="1562" height="328" key="GridCell.Tab.1.bottom" timestamp="1592333746539">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="328" key="GridCell.Tab.1.bottom/72.27.1608.1023@72.27.1608.1023" timestamp="1592333746539" />
+    <state width="1562" height="328" key="GridCell.Tab.1.center" timestamp="1592333746538">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="328" key="GridCell.Tab.1.center/72.27.1608.1023@72.27.1608.1023" timestamp="1592333746538" />
+    <state width="1562" height="328" key="GridCell.Tab.1.left" timestamp="1592333746537">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="328" key="GridCell.Tab.1.left/72.27.1608.1023@72.27.1608.1023" timestamp="1592333746537" />
+    <state width="1562" height="328" key="GridCell.Tab.1.right" timestamp="1592333746539">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state width="1562" height="328" key="GridCell.Tab.1.right/72.27.1608.1023@72.27.1608.1023" timestamp="1592333746539" />
+    <state x="228" y="114" width="1286" height="855" key="MergeDialog" timestamp="1592340783259">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="228" y="114" width="1286" height="855" key="MergeDialog/72.27.1608.1023@72.27.1608.1023" timestamp="1592340783259" />
+    <state x="471" y="260" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1592338971359">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="471" y="260" width="800" height="563" key="Vcs.Push.Dialog.v2/72.27.1608.1023@72.27.1608.1023" timestamp="1592338971359" />
+    <state x="486" y="152" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592257344269">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="486" y="152" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1608.1023@72.27.1608.1023" timestamp="1592257344269" />
+    <state x="601" y="232" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592340761939">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="601" y="232" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/72.27.1608.1023@72.27.1608.1023" timestamp="1592340761939" />
+    <state x="539" y="251" width="672" height="678" key="search.everywhere.popup" timestamp="1592331753277">
+      <screen x="72" y="27" width="1608" height="1023" />
+    </state>
+    <state x="539" y="251" width="672" height="678" key="search.everywhere.popup/72.27.1608.1023@72.27.1608.1023" timestamp="1592331753277" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/markdown_include$test.coverage" NAME="test Coverage Results" MODIFIED="1592340038016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+  </component>
+</project>

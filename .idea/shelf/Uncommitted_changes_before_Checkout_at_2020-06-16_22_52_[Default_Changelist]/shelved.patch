@@ -1,0 +1,56 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Markdown-Include\n\nThis is an extension to [Python-Markdown](https://pythonhosted.org/Markdown/) which provides an \"include\" function, similar to that found in LaTeX (and also the C pre-processor and Fortran). I originally wrote it for my [FORD](https://github.com/cmacmackin/ford) Fortran auto-documentation generator.\n\n\n## Installation\nThis module can now be installed using ``pip``.\n\n    pip install git+https://github.com/docudoc/markdown-include.git#egg=markdown-include\n\n\n## Usage\nThis module can be used in a program in the following way:\n\n```python\nimport markdown\nhtml = markdown.markdown(source, extensions=['markdown_include.include'])\n```\n\nThe syntax for use within your Markdown files is ``{!filename!}``. This statement will be replaced by the contents of ``filename``. Markdown-Include will work recursively, so any included files within ``filename`` will also be included. This replacement is done prior to any other Markdown processing, so any Markdown syntax that you want can be used within your included files. Note that this is a change from the previous version.\n\nIt was felt that this syntax was less likely to conflict with any code fragments present in the Markdown.\n\nBy default, all file-names are evaluated relative to the location from which Markdown is being called. If you would like to change the directory relative to which paths are evaluated, then this can be done by specifying the extension setting ``base_path``.\n\n## Configuration\n\nThe following settings can be specified when initialising the plugin.\n\n- __base_path__: Default location from which to evaluate relative paths for the include statement. (Default: the run-directory.)\n- __encoding__: Encoding of the files used by the include statement. (Default: utf-8.)\n- __inheritHeadingDepth__ : If true, increases headings on include file by amount of previous heading. Combiens with headingOffset   option, below. (Default: False.)\n- __headingOffset__: Increases heading depth by a specific ammount, in addition to the inheritHeadingDepth Option. (Default: 0)\n- __throwException__: When true, if the extension is unable to find an included file it will throw an exception which the user can catch. If false (default), a warning will be printed and Markdown will continue parsing the file.\n- __relativeIncludes__: When true, includes can use relative paths. (Default: false)\n\n\n##Examples\n\nAn example of setting the base path and file encoding is given below:\n```python\nimport markdown\nfrom markdown_include.include import MarkdownInclude\n\n# Markdown Extensions\nmarkdown_include = MarkdownInclude(\n    configs={'base_path':'/srv/content/', 'encoding': 'iso-8859-1'}\n)\nhtml = markdown.markdown(source, extensions=[markdown_include])\n```\n\nIncluded files can inherit the heading depth of the location ``inheritHeadingDepth``, as well as receive a specific offset, ``headingOffset``\n\nFor example, consider the  files\n```markdown\nSource file\n# Heading Level 1 of main file\n\n{!included_file.md!}\n\n## Heading Level 2 of main file\n\n{!included_file.md!}\n```\n\nand included_file.md\n\n```markdown\n# This heading will be one level deeper from the previous heading\nMore included file content.\nEnd of included content.\n```\nThen running the script\n```python\nimport markdown\nfrom markdown_include.include import MarkdownInclude\n\n# Markdown Extensions\nmarkdown_include = MarkdownInclude(\n    configs={'inheritHeadingDepth':True}\n)\nhtml = markdown.markdown(source, extensions=[markdown_include])\n```\nproduces\n```html\n<p>Source file</p>\n<h1>Heading Level 1 of main file</h1>\n<h2>This heading will be one level deeper from the previous heading</h2>\n<p>More included file content.</p>\n<p>End of included content.</p>\n<h2>Heading Level 2 of main file</h2>\n<h3>This heading will be one level deeper from the previous heading</h3>\n<p>More included file content.</p>\n<p>End of included content.</p>\n```\n\n\n## ChangeLog\n### Version 0.6\nYAML Frontmatter is no longer included from the included files.\n### Version 0.5.1\nBugfix for a syntax error.\n### Version 0.5\nCorrected some errors in documentation and merged in commits of [diegobz](https://github.com/diegobz) to add support for encoding and tidy up the source code.\n### Version 0.4\nFixed problem related to passing configurations to the extension.\n### Version 0.3\nAdded support for Python 3.\n### Version 0.2\nChanged the API to be less likely to conflict with other syntax.\n### Version 0.1\nInitial release.\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision e7d7d48dc12c6bec07a090c69eaa4dcad21cc25d)
++++ README.md	(date 1592340757978)
+@@ -17,25 +17,36 @@
+ html = markdown.markdown(source, extensions=['markdown_include.include'])
+ ```
+ 
+-The syntax for use within your Markdown files is ``{!filename!}``. This statement will be replaced by the contents of ``filename``. Markdown-Include will work recursively, so any included files within ``filename`` will also be included. This replacement is done prior to any other Markdown processing, so any Markdown syntax that you want can be used within your included files. Note that this is a change from the previous version.
++## Syntax
++
++The syntax for use within your Markdown files is ``{!filename!}``.
++
++This statement will be replaced by the contents of ``filename``.
++
++Markdown-Include will work recursively, so any included files within ``filename`` will also be included.
+ 
+-It was felt that this syntax was less likely to conflict with any code fragments present in the Markdown.
++This replacement is done prior to any other Markdown processing, so any Markdown syntax that you want can be used within your included files.
++
++## Paths
+ 
+ By default, all file-names are evaluated relative to the location from which Markdown is being called. If you would like to change the directory relative to which paths are evaluated, then this can be done by specifying the extension setting ``base_path``.
+ 
++By using the __relativeIncludes__ option, file names will be evaluated relative to the including file. [TBD]
++
++
+ ## Configuration
+ 
+-The following settings can be specified when initialising the plugin.
++The following settings can be specified when initializing the plugin.
+ 
+-- __base_path__: Default location from which to evaluate relative paths for the include statement. (Default: the run-directory.)
+-- __encoding__: Encoding of the files used by the include statement. (Default: utf-8.)
+-- __inheritHeadingDepth__ : If true, increases headings on include file by amount of previous heading. Combiens with headingOffset   option, below. (Default: False.)
+-- __headingOffset__: Increases heading depth by a specific ammount, in addition to the inheritHeadingDepth Option. (Default: 0)
+-- __throwException__: When true, if the extension is unable to find an included file it will throw an exception which the user can catch. If false (default), a warning will be printed and Markdown will continue parsing the file.
+-- __relativeIncludes__: When true, includes can use relative paths. (Default: false)
++- __base_path__: Default location from which to evaluate relative paths for the include statement. _(Default: the run-directory)_
++- __encoding__: Encoding of the files used by the include statement. _(Default: UTF-8)_
++- __inheritHeadingDepth__ : If true, increases headings on include file by amount of previous heading. Combiens with headingOffset   option, below. _(Default: False)_
++- __headingOffset__: Increases heading depth by a specific ammount, in addition to the inheritHeadingDepth Option. _(Default: 0)_
++- __throwException__: If the extension is unable to find an included file it will throw an exception. Default behavior is to print a warning and Markdown will continue parsing the file. _(Default: False)_
++- __relativeIncludes__: When true, includes can use relative paths. _(Default: False)_
+ 
+ 
+-##Examples
++## Examples
+ 
+ An example of setting the base path and file encoding is given below:
+ ```python
