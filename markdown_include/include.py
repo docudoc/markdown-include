@@ -33,6 +33,14 @@ from pathlib import Path
 INC_SYNTAX = re.compile(r'\{!\s*(.+?)\s*!\}')
 HEADING_SYNTAX = re.compile( '^#+' )
 
+'''
+LINK [Title](link) / IMG: ![Title](link)
+Group 1: Title
+Group 2: Link
+'''
+LINK_SYNTAX = re.compile(r'\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
+IMG_SYNTAX = re.compile(r'!\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
+
 
 class MarkdownInclude(Extension):
     def __init__(self, configs={}):
