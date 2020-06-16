@@ -31,6 +31,8 @@ from markdown.preprocessors import Preprocessor
 from pathlib import Path
 
 INC_SYNTAX = re.compile(r'\{!\s*(.+?)\s*!\}')
+# Alternative future include syntax
+# [TBD] INC_LINK_SYNTAX = re.compile(r':\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
 HEADING_SYNTAX = re.compile( '^#+' )
 
 '''
@@ -41,27 +43,22 @@ Group 2: Link
 LINK_SYNTAX = re.compile(r'\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
 IMG_SYNTAX = re.compile(r'!\[\s*(.+?)\s*\]\(\s*(.+?)\s*\)')
 
-
-
-
 class MarkdownInclude(Extension):
     def __init__(self, configs={}):
         self.config = {
-            'base_path': ['.', 'Default location from which to evaluate ' \
+            'base_path': ['.', 'Root location from which to evaluate ' \
                 'relative paths for the include statement.'],
-            'encoding': ['utf-8', 'Encoding of the files used by the include ' \
-                'statement.'],
+            'encoding': ['utf-8', 'Encoding for included files.'],
             'headingOffset': [0, 'Increases heading depth by a specific ' \
-                'amount (and the inheritHeadingDepth option).  Defaults to 0.'],
+                'amount (combines with _inheritHeadingDepth_ option).'],
             'inheritHeadingDepth': [False, 'Increases headings on included ' \
                 'file by amount of previous heading (combines with '\
-                'headingOffset option).'],
-            'relativeIncludes': [False, 'When true, includes can use relative paths.(Default: false)'],
-            'throwException': [False, 'When true, if the extension is unable '\
-                                'to find an included file it will throw an '\
-                                'exception which the user can catch. If false '\
-                                '(default), a warning will be printed and '\
-                                'Markdown will continue parsing the file.']
+                '_headingOffset_ option).'],
+            'relativeIncludes': [False, 'Allow includes to use paths relative to the including file.'],
+            'throwException': [False, 'If the extension is unable to find an included file '\
+                                'it will throw an exception.  '\
+                                'Default behavior is to print a warning '\
+                                'and continue parsing the file. ']
         }
         for key, value in configs.items():
             self.setConfig(key, value)
