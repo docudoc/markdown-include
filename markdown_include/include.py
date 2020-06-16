@@ -100,19 +100,23 @@ class IncludePreprocessor(Preprocessor):
         return path.parent
 
     '''Remove yaml from the inclusion'''
-    def excise_yaml(self, text, start, end):
-        outtext=''
+
+    def excise_yaml(text):
+        skip = False
+        outtext = ''
         YAML_START = ['---']
-        YAML_STOP = ['---', '...']
+        YAML_STOP = ['...']
         for line in text.splitlines():
             if line.strip() in YAML_START:
-                break
-            outtext += line
-        for line in text.splitlines():
+                skip = True
+                continue
             if line.strip() in YAML_STOP:
-                break
-        for line in text:
-            outtext += line
+                skip = False
+                continue
+            if skip == True:
+                pass
+            else:
+                outtext += line + ('\n')
         return outtext
 
     def run(self, lines):
