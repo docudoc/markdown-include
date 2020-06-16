@@ -100,24 +100,13 @@ class IncludePreprocessor(Preprocessor):
         return path.parent
 
     '''Remove yaml from the inclusion'''
-
-    def excise_yaml(text):
-        skip = False
-        outtext = ''
-        YAML_START = ['---']
-        YAML_STOP = ['...']
-        for line in text.splitlines():
-            if line.strip() in YAML_START:
-                skip = True
-                continue
-            if line.strip() in YAML_STOP:
-                skip = False
-                continue
-            if skip == True:
-                pass
-            else:
-                outtext += line + ('\n')
-        return outtext
+    def excise_yaml(self, text):
+        YAML_MARKS = ['...', '---']
+        # Find the yaml marks
+        indices = [i for i, s in enumerate(text) if any(code in s for code in YAML_MARKS)]
+        # Delete everything between the first two marks
+        del text[indices[0]:indices[1]]
+        return text
 
     def run(self, lines):
         done = False
@@ -136,6 +125,7 @@ class IncludePreprocessor(Preprocessor):
                     try:
                         with open(filename, 'r', encoding=self.encoding) as r:
                             text = r.readlines()
+                            # Remove Yaml frontmatter
                             text = self.excise_yaml(text)
                             
                     except Exception as e:
