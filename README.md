@@ -34,6 +34,7 @@ The following settings can be specified when initialising the plugin.
 - __throwException__: When true, if the extension is unable to find an included file it will throw an exception which the user can catch. If false (default), a warning will be printed and Markdown will continue parsing the file.
 - __relativeIncludes__: When true, includes can use relative paths. (Default: false)
 
+
 ##Examples
 
 An example of setting the base path and file encoding is given below:
@@ -96,7 +97,7 @@ produces
 
 ## ChangeLog
 ### Version 0.6
-
+YAML Frontmatter is no longer included from the included files.
 ### Version 0.5.1
 Bugfix for a syntax error.
 ### Version 0.5
