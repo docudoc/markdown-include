@@ -28,6 +28,7 @@ import os.path
 from codecs import open
 from markdown.extensions import Extension
 from markdown.preprocessors import Preprocessor
+from pathlib import Path
 
 INC_SYNTAX = re.compile(r'\{!\s*(.+?)\s*!\}')
 HEADING_SYNTAX = re.compile( '^#+' )
@@ -67,8 +68,7 @@ class IncludePreprocessor(Preprocessor):
     LaTeX (also the C pre-processor and Fortran). The syntax is {!filename!},
     which will be replaced by the contents of filename. Any such statements in
     filename will also be replaced. This replacement is done prior to any other
-    Markdown processing. All file-names are evaluated relative to the location
-    from which Markdown is being called.
+    Markdown processing.
     '''
     def __init__(self, md, config):
         super(IncludePreprocessor, self).__init__(md)
@@ -77,6 +77,17 @@ class IncludePreprocessor(Preprocessor):
         self.inheritHeadingDepth = config['inheritHeadingDepth']
         self.headingOffset = config['headingOffset']
         self.throwException = config['throwException']
+        self.relativeIncludes = config['relativeIncludes']
+
+    '''Web links can be ignored'''
+    def ignore_link(self, link):
+        return link.startswith(u"http") or link.startswith(u"#") or link.startswith(u"ftp") or link.startswith(
+            u"www") or link.startswith(u"mailto")
+
+    '''Return the location of the included file'''
+    def get_dir_path(self, file):
+        path = Path(file)
+        return path.parent
 
     def run(self, lines):
         done = False
